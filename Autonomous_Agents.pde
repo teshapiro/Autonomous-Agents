@@ -10,13 +10,13 @@ void setup()
   frameRate(25);
   smooth(8);
   
-  vehicle = new Vehicle(width/2,height/2);
+  vehicle = new Vehicle(width/2,height/2,"seek");
 }
 
 void draw()
 {
   background(255);
-  vehicle.seek(new PVector(mouseX,mouseY));
+  vehicle.act(new PVector(mouseX,mouseY));
   vehicle.update();
   vehicle.display();
 }
